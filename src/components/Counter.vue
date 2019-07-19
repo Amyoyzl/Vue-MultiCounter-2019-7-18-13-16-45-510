@@ -1,9 +1,9 @@
 <template>
     <div id="counter">
         <p>
-            <button @click="sub">-</button>
+            <button v-on:click="$emit('change-counter', -1,  count--)"> - </button>
             <span>{{ count }}</span>
-            <button @click="add">+</button>
+            <button v-on:click="$emit('change-counter', 1, count++)"> + </button>
         </p>
     </div>
 </template>
@@ -15,16 +15,12 @@ export default {
         return {
             count: 0
         }
-    },
-    methods: {
-        sub() { this.count--; },
-        add() { this.count++; }
     }
 }
 </script>
 
 <style scoped>
 span {
-    margin: 0 10px;
+    margin: 0 20px;
 }
 </style>
