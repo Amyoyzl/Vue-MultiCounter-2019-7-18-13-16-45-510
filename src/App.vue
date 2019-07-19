@@ -1,22 +1,29 @@
 <template>
   <div id="app">
-    <v-counterGroup></v-counterGroup>
+    显示个数：
+    <input type="text" v-model="counterNum" />
+    <v-counterGroup :counterNum="parseInt(counterNum) || 0"></v-counterGroup>
   </div>
 </template>
 
 <script>
-import CounterGroup from './components/CounterGroup.vue'
+import CounterGroup from "./components/CounterGroup.vue";
 export default {
-  name: 'app',
+  name: "app",
   components: {
     "v-counterGroup": CounterGroup
+  },
+  data() {
+    return {
+      counterNum: 0
+    };
   }
-}
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
