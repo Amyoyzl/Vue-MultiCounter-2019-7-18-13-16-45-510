@@ -1,17 +1,15 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <v-counterGroup></v-counterGroup>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import CounterGroup from './components/CounterGroup.vue'
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    "v-counterGroup": CounterGroup
   }
 }
 </script>
